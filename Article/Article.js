@@ -163,3 +163,8 @@ function printArticle(title, date, firstParagraph, secondParagraph, thirdParagra
     return article;
 
 }
+
+
+
+
+const tween = TweenMax.to(".expandButton", 1, { css: { left: "80%", backgroundColor: "green", color: "white", fontWeight: "600", fontSize: "15px" }, delay: .5 });
