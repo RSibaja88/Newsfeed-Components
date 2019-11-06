@@ -85,6 +85,9 @@ const data = [{
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
     },
+
+    //   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+
     {
         title: 'Panem: Peace at ALL Costs.',
         date: 'Jan 1st, 2083',
@@ -112,6 +115,8 @@ const data = [{
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.*/
 
 const makeArticles = document.querySelector('.articles');
+
+//   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
 data.forEach(data => {
     console.log('creating article:', data.title)
@@ -141,6 +146,8 @@ function printArticle(title, date, firstParagraph, secondParagraph, thirdParagra
     artP3.classList.add('p');
     artSpan.classList.add('expandButton');
 
+    // Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+
     artTitle.textContent = title;
     artDate.textContent = date;
     artP1.textContent = firstParagraph;
@@ -151,15 +158,8 @@ function printArticle(title, date, firstParagraph, secondParagraph, thirdParagra
         article.classList.toggle("article-open");
     });
 
+    //   Step 3: return the entire component.
+
     return article;
 
 }
-
-
-// Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
-
-//   Step 3: return the entire component.
-
-//   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
-
-//   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
